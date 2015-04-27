@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/angular.min.js" type="text/javascript"></script>
+	 <link rel="stylesheet" href="css/style.css" />
+	 <script src="js/cal.js" type="text/javascript"></script>
+</head>
+
+  <div ng-app='CalApp' ng-controller="CalCtrl">
+    <div class="calcbody">
+      <button class="round red"></button>
+      <button class="round yellow"></button>
+      <button class="round gray"></button>
+      <span class="title">Calculator</span>
+      <div class="thinborder output" name="output">
+          {{output}}<br>
+          {{operationToken}}
+      </div>
+    <div class="calcbuttons">
+        <button name="btnMC" class="button">MC</button>
+        <button name="btnMplus" class="button">M+</button>
+        <button name="btnMminus" class="button">M-</button>
+        <button name="btnMR" class="button">MR</button>
+        <br>
+        <button name="btnClear" class="button" ng-click='clear()'>C</button>
+        <button name="btnMinusPlus" class="button">&plusmn;</button>
+        <button name="btnDivide" class="button" ng-click='divide()'>&divide;</button>
+        <button name="btnTimes" class="button" ng-click='multipy()'> x </button>
+        <br>
+        <button name="btn1" class="button" value="7" ng-click='updateOutput(7)'>7</button>
+        <button name="btn2" class="button" value="8" ng-click='updateOutput(8)'>8</button>
+        <button name="btn3" class="button" value="9" ng-click='updateOutput(9)'>9</button>
+        <button name="btnMinus" class="button" ng-click='subtract()'> - </button>
+        <br>
+        <button name="btn4" class="button" value="4" ng-click='updateOutput(4)'>4</button>
+        <button name="btn5" class="button" value="5" ng-click='updateOutput(5)'>5</button>
+        <button name="btn6" class="button" value="6" ng-click='updateOutput(6)'>6</button>
+        <button name="btnPlus" class="button" ng-click='add()'>+</button>
+        <br>
+        <button name="btn7" class="button" value="1" ng-click='updateOutput(1)'>1</button>
+        <button name="btn8" class="button" value="2" ng-click='updateOutput(2)'>2</button>
+        <button name="btn9" class="button" value="3" ng-click='updateOutput(3)'>3</button>
+        <button name="btnEquals" class="button equals" ng-click='calculate()'>=</button>
+        <br>
+        <button name="btn0" class="button zero"  value="0" ng-click='updateOutput(0)'>0</button>
+        <button name="btnDot" class="button">.</button>
+     </div>
+    
+    </div>
+    
+  </div>
+</html>
